@@ -1,0 +1,20 @@
+steps:
+- name: 'gcr.io/phone_tool/dataflow-python3'
+  dir: 'audio_files_dataflow'
+  entrypoint: '/bin/bash'
+  args:
+    - '-c'
+    - |
+        source /venv/bin/activate
+        pip install -r requirements.txt
+        python main.py  \
+        --runner=DataflowRunner \
+        --region=us-west1 \
+        --temp_location=gs://call_center_recording/temp \
+        --staging_location=gs://call_center_recording/staging \
+        --template_location=gs://call_center_recording/templates/for_dataflow \
+        --project=phone_tool \
+        --max_num_workers=290 \
+        --subnetwork=https://www.googleapis.com/compute/v1/projects/phone_tool/regions/us-west1/subnetworks/phone_tool \
+        --save_main_session \
+        --requirements_file=requirements.txt \

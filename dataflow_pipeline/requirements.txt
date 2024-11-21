@@ -1,0 +1,17 @@
+google-auth==2.23.2
+google-cloud-bigquery-storage==2.13.1
+google-cloud-bigtable==2.21.0
+google-cloud-core==2.3.3
+google-cloud==0.34.0
+google_api_python_client==2.101.0
+google-cloud-secret-manager==2.8.0
+protobuf==3.20.3
+google-cloud-storage==2.11.0
+google-cloud-bigquery==3.12.0
+google-cloud-pubsub==2.18.4
+apache-beam[gcp]==2.50.0
+boto3 >=1.28.57
+google-cloud-speech >=2.22.0
+google-api-core == 2.12.0
+pydub >= 0.25.1
+pandas >= 2.1.3
